@@ -18,7 +18,5 @@ jobs:
         with:
           node-version: 18
 
-      - name: Node version check
-        run: |
-          node --version
-          (exit 0)
+      - name: Echo Node version
+        run: node --version 
