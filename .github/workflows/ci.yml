@@ -21,5 +21,5 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run getAPIKey Test
+      - name: Run Test
         run: npm run test -- --coverage
