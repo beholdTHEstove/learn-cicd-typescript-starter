@@ -40,10 +40,6 @@ if (db) {
   v1Router.post("/notes", middlewareAuth(handlerNotesCreate));
 }
 
-function unused() {
-  // This function is intentionally left empty to avoid unused import warnings.
-}
-
 v1Router.get("/healthz", handlerReadiness);
 
 app.use("/v1", v1Router);
