@@ -5,8 +5,8 @@ on:
     branches: [main]
 
 jobs:
-  code_tests:
-    name: Code Tests
+  tests:
+    name: Tests
     runs-on: ubuntu-latest
 
     steps:
