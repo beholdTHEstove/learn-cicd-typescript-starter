@@ -36,3 +36,12 @@ jobs:
 
       - name: 'Google Cloud Build'
         run: 'gcloud builds submit --tag us-central1-docker.pkg.dev/notely-462511/notely-ar-repo/aarontemplin/notely:latest'
+
+      - name: 'Deploy to Google Cloud Run'
+        run: |
+          gcloud run deploy notely-ar \
+            --image us-central1-docker.pkg.dev/notely-462511/notely-ar-repo/aarontemplin/notely:latest \
+            --region us-central1 \
+            --allow-unauthenticated \
+            --project notely-462511 \
+            --max-instances 4
