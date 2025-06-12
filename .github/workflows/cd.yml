@@ -41,7 +41,7 @@ jobs:
         run: 'gcloud builds submit --tag us-central1-docker.pkg.dev/notely-462511/notely-ar-repo/aarontemplin/notely:latest'
 
       - name: 'Migrate Database'
-        run: npm db:migrate
+        run: npm run db:migrate
 
       - name: 'Deploy to Google Cloud Run'
         run: |
